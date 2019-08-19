@@ -1,0 +1,35 @@
+package com.amdocs;
+import java.util.*;
+
+
+
+public class ContactsDemo {
+	
+	private HashMap<String, String> contacts;
+	
+	public ContactsDemo() {
+		this.contacts = new HashMap<String, String>();
+	}
+	
+	public void addContact( String name, String mobileNo) {
+		contacts.put(name, mobileNo);
+	}
+	
+	public String findNamebyMobileNo(String mobileNo) {
+		String name = contacts.get(mobileNo);
+		if (name != null)
+				return name;
+		return mobileNo;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ContactsDemo contact = new ContactsDemo();
+		contact.addContact("Jesse", "123123");
+		contact.addContact("Walter", "321-321");
+		String res = contact.findNamebyMobileNo("\"321-321\"");
+		System.out.println( res );
+
+	}
+
+}

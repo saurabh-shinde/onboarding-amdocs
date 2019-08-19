@@ -1,0 +1,13 @@
+package com.amdocs;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Address address = new Address("100", "Sesame", "Mumbai", "404040");
+		
+		Employee saurabh = new Employee("Saurabh", "Software Engineer","AD Tech", address);
+
+	}
+
+}
